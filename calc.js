@@ -13,9 +13,13 @@ function back() {
 
 function summ() {
     var result = document.form.textview.value;
-
-    if(result) {
-        document.form.textview.value = eval(result);
-    }
+    
+    try {
+        if(result) {
+            document.form.textview.value = eval(result);
+        }
+    } catch {
+        document.form.textview.value = "";
+    }    
    
 }
